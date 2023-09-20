@@ -13,8 +13,8 @@ const app = express();
 try {
     app.use(express.json());
     app.use(cors());
-    app.use('', ideasListRouter);
-    app.use('', completedIdeasRouter);
+    app.use('/', ideasListRouter);
+    app.use('/', completedIdeasRouter);
 
     app.listen(PORT, () => {
         console.log(`Server starting on PORT ${PORT}`);
